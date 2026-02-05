@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rectly - Die intelligente Meeting-Aufnahme-App mit KI-gestützter Transkription, Sprechererkennung und automatischen Zusammenfassungen für iOS.">
+  <meta name="keywords" content="Meeting-Aufnahme, Transkription, iOS App, KI, Sprechererkennung, Audio-Aufnahme">
+  <meta name="author" content="Rectly">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rectly - Intelligente Meeting-Aufnahme & Transkription">
+  <meta property="og:description" content="Zeichne Meetings auf, transkribiere automatisch und erhalte KI-gestützte Zusammenfassungen.">
+  <meta property="og:type" content="website">
+  
+  <title>Rectly - Intelligente Meeting-Aufnahme & Transkription</title>
+  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+</head>
+<body>
+  <!-- Canvas für Emoji-Hintergrund -->
+  <canvas id="emoji-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="logo-container">
+        <img src="../assets/images/logo.png" alt="Rectly Logo" class="logo">
+        <span class="logo-text">Rectly</span>
+      </a>
+      
+      <div class="language-switcher">
+        <a href="../de/index.html" class="lang-btn active" title="Deutsch">🇩🇪</a>
+        <a href="../en/index.html" class="lang-btn" title="English">🇬🇧</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Meetings aufnehmen.<br>Transkribieren.<br>Verstehen.</h1>
+      <p>
+        Rectly verwandelt deine Meetings in durchsuchbare Transkripte mit KI-gestützten Zusammenfassungen, 
+        Sprechererkennung und intelligenter Analyse – direkt auf deinem iPhone.
+      </p>
+      <div class="cta-buttons">
+        <a href="#features" class="btn btn-primary">
+          ✨ Funktionen entdecken
+        </a>
+        <a href="#download" class="btn btn-secondary">
+          📱 Jetzt herunterladen
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="section-title">Leistungsstarke Funktionen</h2>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🎙️</div>
+          <h3>Kristallklare Aufnahmen</h3>
+          <p>
+            Hochwertige Audio-Aufnahmen im M4A-Format mit optimierter Kompression. 
+            Perfekt für Meetings, Interviews und Notizen.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>KI-Transkription</h3>
+          <p>
+            Wähle zwischen OpenAI Whisper, AssemblyAI oder lokaler Apple-Spracherkennung. 
+            Präzise Transkription in Echtzeit mit Zeitstempeln.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🗣️</div>
+          <h3>Sprechererkennung</h3>
+          <p>
+            Automatische Identifikation verschiedener Sprecher (Diarization). 
+            Weise Namen zu und behalte den Überblick, wer was gesagt hat.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">✨</div>
+          <h3>KI-Zusammenfassungen</h3>
+          <p>
+            Erhalte automatisch generierte Meeting-Zusammenfassungen, Aktionspunkte 
+            und wichtige Erkenntnisse durch KI-Analyse.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h3>KI-Chat Assistent</h3>
+          <p>
+            Stelle Fragen zu deinen Aufnahmen. Der KI-Assistent hilft dir, 
+            spezifische Informationen schnell zu finden.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📄</div>
+          <h3>PDF-Export</h3>
+          <p>
+            Exportiere Transkripte, Zusammenfassungen und Sprechernotizen als 
+            professionell formatierte A4-PDFs zum Teilen.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>Datenschutz & Sicherheit</h3>
+          <p>
+            Alle Daten bleiben auf deinem Gerät. Optional lokale Transkription 
+            ohne Internet. API-Schlüssel sicher im Keychain gespeichert.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🌍</div>
+          <h3>Mehrsprachig</h3>
+          <p>
+            Vollständig lokalisiert in Deutsch und Englisch. 
+            Wechsle die Sprache jederzeit in den Einstellungen.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Kosten-Dashboard</h3>
+          <p>
+            Behalte deine API-Kosten im Blick. Transparente Übersicht über 
+            Transkriptions- und KI-Nutzung (nur im API-Modus).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="how-it-works">
+    <div class="container">
+      <h2 class="section-title">So einfach funktioniert's</h2>
+      
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Aufnehmen</h3>
+          <p>
+            Starte die Aufnahme mit einem Klick. Rectly zeichnet in höchster 
+            Qualität auf und zeigt die Dauer in Echtzeit an.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Transkribieren</h3>
+          <p>
+            Wähle zwischen API-basierter KI-Transkription oder lokaler 
+            Apple-Spracherkennung. Die Transkription startet automatisch.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Sprecher zuweisen</h3>
+          <p>
+            Bei aktivierter Sprechererkennung kannst du automatisch erkannten 
+            Sprechern Namen zuweisen – für bessere Übersicht.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Analysieren & Teilen</h3>
+          <p>
+            Nutze KI-Zusammenfassungen, durchsuche Transkripte, stelle Fragen 
+            im Chat und exportiere alles als PDF.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section id="download" class="download">
+    <div class="container">
+      <h2>Bereit, deine Meetings zu revolutionieren?</h2>
+      <p>Lade Rectly jetzt herunter und erlebe die Zukunft der Meeting-Dokumentation.</p>
+      <div class="cta-buttons">
+        <a href="#" class="btn btn-primary" style="background: white; color: #1E90FF;">
+          📱 Im App Store herunterladen
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Rectly</h3>
+          <p>Die intelligente Meeting-Aufnahme-App für iOS.</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Produkt</h3>
+          <ul>
+            <li><a href="#features">Funktionen</a></li>
+            <li><a href="#how-it-works">So funktioniert's</a></li>
+            <li><a href="#download">Download</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Rechtliches</h3>
+          <ul>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+            <li><a href="datenschutz.html#impressum">Impressum</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="mailto:support@rectly.app">support@rectly.app</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Rectly. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/emoji-background.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
