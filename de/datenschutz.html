@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Datenschutzerklärung für Rectly - Website und iOS App">
+  <title>Datenschutz - Rectly</title>
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+</head>
+<body>
+  <!-- Canvas für Emoji-Hintergrund -->
+  <canvas id="emoji-canvas"></canvas>
+
+  <!-- Language Switcher -->
+  <div class="language-switcher">
+    <a href="../de/datenschutz.html" class="lang-btn active" title="Deutsch"><img src="../assets/images/flag-de.svg" alt="DE" class="flag-icon"></a>
+    <a href="../en/privacy.html" class="lang-btn" title="English"><img src="../assets/images/flag-gb.svg" alt="EN" class="flag-icon"></a>
+  </div>
+
+  <!-- Privacy Content -->
+  <section class="privacy-page">
+    <a href="index.html" class="back-button">← Zurück zur Startseite</a>
+
+    <div class="privacy-content">
+      <h1>Datenschutzerklärung</h1>
+      <p><em>Letzte Aktualisierung: Februar 2026</em></p>
+
+      <p>
+        Diese Datenschutzerklärung gilt sowohl für die Rectly-Website (rectly.app) als auch
+        für die Rectly iOS-App. Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst und
+        behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen
+        Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+      </p>
+
+      <h2>1. Datenschutz für die Website (rectly.app)</h2>
+
+      <h3>1.1 Verantwortliche Stelle</h3>
+      <p>
+        Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br>
+        [Ihr Name/Firmenname]<br>
+        [Adresse]<br>
+        [E-Mail: kontakt@rectly.app]
+      </p>
+
+      <h3>1.2 Erhebung und Speicherung personenbezogener Daten</h3>
+      <p>
+        Beim Besuch unserer Website werden automatisch Informationen allgemeiner Natur erfasst.
+        Diese Informationen (Server-Logfiles) beinhalten etwa die Art des Webbrowsers,
+        das verwendete Betriebssystem, den Domainnamen Ihres Internet Service Providers
+        und Ähnliches. Hierbei handelt es sich ausschließlich um Informationen, welche keine
+        Rückschlüsse auf Ihre Person zulassen.
+      </p>
+
+      <h3>1.3 Cookies</h3>
+      <p>
+        Diese Website verwendet keine Tracking-Cookies. Lediglich technisch notwendige Cookies
+        (z.B. für die Sprachauswahl) können gesetzt werden. Diese dienen ausschließlich der
+        Funktionalität der Website und sammeln keine personenbezogenen Daten.
+      </p>
+
+      <h3>1.4 SSL-Verschlüsselung</h3>
+      <p>
+        Diese Seite nutzt aus Gründen der Sicherheit und zum Schutz der Übertragung vertraulicher
+        Inhalte eine SSL-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran,
+        dass die Adresszeile des Browsers von "http://" auf "https://" wechselt.
+      </p>
+
+      <h3>1.5 Kontaktaufnahme</h3>
+      <p>
+        Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben (E-Mail-Adresse, ggf. Name und
+        weitere mitgeteilte Informationen) von uns gespeichert, um Ihre Fragen zu beantworten.
+        Diese Daten werden ohne Ihre Einwilligung nicht an Dritte weitergegeben. Die Verarbeitung
+        erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO.
+      </p>
+
+      <h2>2. Datenschutz für die Rectly iOS-App</h2>
+
+      <h3>2.1 Grundsatz: Lokale Datenspeicherung</h3>
+      <p>
+        <strong>Rectly wurde mit Fokus auf Datenschutz entwickelt.</strong> Alle Ihre Aufnahmen,
+        Transkripte, Notizen und persönlichen Daten werden standardmäßig ausschließlich lokal
+        auf Ihrem iOS-Gerät gespeichert. Wir haben keinen Zugriff auf Ihre Daten und diese
+        verlassen Ihr Gerät nicht – es sei denn, Sie entscheiden sich explizit für die Nutzung
+        externer Dienste.
+      </p>
+
+      <h3>2.2 Datenverarbeitung im Detail</h3>
+
+      <h4>2.2.1 Audio-Aufnahmen</h4>
+      <ul>
+        <li>Audio-Dateien werden im M4A-Format im Documents-Ordner Ihrer App gespeichert</li>
+        <li>Diese Dateien bleiben auf Ihrem Gerät und werden nicht hochgeladen</li>
+        <li>Sie haben jederzeit volle Kontrolle über Ihre Aufnahmen (Löschen, Exportieren)</li>
+        <li>Bei aktiviertem iCloud-Backup können Audio-Dateien in Ihre iCloud gesichert werden</li>
+      </ul>
+
+      <h4>2.2.2 Transkriptions-Modi</h4>
+      <p><strong>Lokaler Modus (Apple Speech Recognition):</strong></p>
+      <ul>
+        <li>Transkription erfolgt vollständig auf Ihrem Gerät mittels Apple Speech Recognition</li>
+        <li>Keine Datenübertragung an externe Server</li>
+        <li>Keine API-Kosten</li>
+        <li>Alle KI-Features sind in diesem Modus deaktiviert</li>
+      </ul>
+
+      <p><strong>API-Modus (OpenAI Whisper / AssemblyAI):</strong></p>
+      <ul>
+        <li>Wenn Sie den API-Modus wählen, werden Audio-Dateien an externe Dienste gesendet</li>
+        <li>Sie müssen eigene API-Schlüssel für diese Dienste hinterlegen</li>
+        <li>Die Übertragung erfolgt verschlüsselt (HTTPS)</li>
+        <li>Externe Anbieter:
+          <ul>
+            <li><strong>OpenAI (Whisper):</strong> Datenschutzerklärung unter <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a></li>
+            <li><strong>AssemblyAI:</strong> Datenschutzerklärung unter <a href="https://www.assemblyai.com/legal/privacy-policy" target="_blank">assemblyai.com/legal/privacy-policy</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <h4>2.2.3 KI-Features (nur im API-Modus)</h4>
+      <ul>
+        <li>KI-Zusammenfassungen werden über OpenAI Chat API generiert</li>
+        <li>Hierfür wird das Transkript an OpenAI gesendet</li>
+        <li>Sie benötigen einen eigenen OpenAI API-Schlüssel</li>
+        <li>OpenAI's Datenschutzrichtlinien gelten für diese Verarbeitung</li>
+      </ul>
+
+      <h4>2.2.4 API-Schlüssel</h4>
+      <ul>
+        <li>Ihre API-Schlüssel werden verschlüsselt im iOS Keychain gespeichert</li>
+        <li>Zugriff erfolgt über biometrische Authentifizierung (Face ID / Touch ID)</li>
+        <li>API-Schlüssel verlassen niemals Ihr Gerät</li>
+        <li>Wir als App-Entwickler haben keinen Zugriff auf Ihre Schlüssel</li>
+      </ul>
+
+      <h3>2.3 Berechtigungen</h3>
+      <p>Die App benötigt folgende Berechtigungen:</p>
+      <ul>
+        <li><strong>Mikrofon:</strong> Zum Aufnehmen von Audio (zwingend erforderlich)</li>
+        <li><strong>Spracherkennung:</strong> Für lokale Transkription (optional)</li>
+        <li><strong>Benachrichtigungen:</strong> Für Hinweise bei abgeschlossener Transkription (optional)</li>
+      </ul>
+
+      <h3>2.4 Keine Analyse oder Tracking</h3>
+      <p>
+        Rectly enthält keinerlei Analyse-Tools, Tracking-Software oder Werbung.
+        Wir sammeln keine Nutzungsdaten und erstellen keine Nutzerprofile.
+      </p>
+
+      <h3>2.5 Export und Teilen</h3>
+      <p>
+        Sie können Transkripte und Aufnahmen jederzeit über die iOS-Share-Funktion exportieren.
+        Dabei entscheiden Sie selbst, wohin die Daten gesendet werden (E-Mail, Cloud-Dienste, etc.).
+        Für diese externen Dienste gelten deren eigene Datenschutzbestimmungen.
+      </p>
+
+      <h2>3. Ihre Rechte</h2>
+      <p>Sie haben jederzeit das Recht auf:</p>
+      <ul>
+        <li>Auskunft über Ihre gespeicherten Daten</li>
+        <li>Berichtigung unrichtiger Daten</li>
+        <li>Löschung Ihrer Daten</li>
+        <li>Einschränkung der Datenverarbeitung</li>
+        <li>Datenübertragbarkeit</li>
+        <li>Widerspruch gegen die Datenverarbeitung</li>
+      </ul>
+
+      <p>
+        Da die App-Daten lokal auf Ihrem Gerät gespeichert sind, können Sie Ihre Rechte
+        direkt durch Löschen der Daten in der App oder durch Deinstallation ausüben.
+      </p>
+
+      <h2>4. Datensicherheit</h2>
+      <p>
+        Wir setzen technische und organisatorische Sicherheitsmaßnahmen ein, um Ihre Daten
+        gegen zufällige oder vorsätzliche Manipulationen, Verlust, Zerstörung oder den Zugriff
+        unberechtigter Personen zu schützen.
+      </p>
+
+      <h2>5. Änderungen der Datenschutzerklärung</h2>
+      <p>
+        Wir behalten uns vor, diese Datenschutzerklärung gelegentlich anzupassen, damit sie
+        stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer
+        Leistungen umzusetzen. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.
+      </p>
+
+      <h2>6. Kontakt</h2>
+      <p>
+        Bei Fragen zum Datenschutz oder zur Ausübung Ihrer Rechte kontaktieren Sie uns bitte unter:<br>
+        E-Mail: kontakt@rectly.app
+      </p>
+
+      <h2 id="impressum">7. Impressum</h2>
+      <p>
+        Angaben gemäß § 5 TMG:<br><br>
+        [Ihr Name/Firmenname]<br>
+        [Adresse]<br>
+        [PLZ Ort]<br>
+        [Land]<br><br>
+
+        <strong>Kontakt:</strong><br>
+        E-Mail: kontakt@rectly.app<br><br>
+
+        <strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>
+        [Ihr Name]<br>
+        [Adresse]<br>
+        [PLZ Ort]
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="datenschutz.html#impressum">Impressum</a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Rectly. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/emoji-background.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
