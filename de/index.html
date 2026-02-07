@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rectly - Die intelligente Meeting-Aufnahme-App mit KI-gestützter Transkription für iOS.">
+  <meta name="keywords" content="Meeting-Aufnahme, Transkription, iOS App, KI">
+  
+  <title>Rectly - Intelligente Meeting-Aufnahme</title>
+  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+</head>
+<body>
+  <!-- Canvas für Emoji-Hintergrund -->
+  <canvas id="emoji-canvas"></canvas>
+
+  <!-- Language Switcher -->
+  <div class="language-switcher">
+    <a href="../de/index.html" class="lang-btn active" title="Deutsch"><img src="../assets/images/flag-de.svg" alt="DE" class="flag-icon"></a>
+    <a href="../en/index.html" class="lang-btn" title="English"><img src="../assets/images/flag-gb.svg" alt="EN" class="flag-icon"></a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <!-- Logo & App Store -->
+      <div class="logo-section">
+        <div class="logo-title-group">
+          <img src="../assets/images/logo.png" alt="Rectly App Icon" class="app-icon">
+          <div class="title-group">
+            <h1>Rectly</h1>
+          </div>
+        </div>
+        <div class="app-store-section">
+          <a href="#" class="app-store-badge">
+            <img src="../assets/images/app-store-badge-de.svg" alt="Laden im App Store">
+          </a>
+        </div>
+      </div>
+
+      <p class="tagline">
+        Deine intelligente Meeting-Aufnahme-App mit KI-gestützter Transkription und Sprechererkennung.
+      </p>
+
+      <!-- App Preview -->
+      <div class="app-preview">
+        <img src="../assets/images/Fertig1.png" alt="Rectly App Screenshot 1" class="preview-image">
+        <img src="../assets/images/Fertig2.png" alt="Rectly App Screenshot 2" class="preview-image">
+        <img src="../assets/images/Fertig3.png" alt="Rectly App Screenshot 3" class="preview-image">
+      </div>
+
+      <!-- Feature Cards + Vergleichstabelle -->
+      <div class="feature-cards always-open">
+        <div class="feature-cards-top">
+          <div class="feature-card">
+            <span class="feature-card-icon"><img src="../assets/images/lokal.png" alt="Lokal" class="feature-icon-img"></span>
+            <div class="feature-card-title">Komplett lokal nutzbar</div>
+            <div class="feature-card-text">
+              Rectly funktioniert vollständig auf deinem Gerät – ohne KI, ohne Account und ohne Internetverbindung. Aufnahme, Transkription und manuelle Sprechererkennung inklusive.
+            </div>
+          </div>
+          <div class="feature-card">
+            <span class="feature-card-icon"><img src="../assets/images/KI.png" alt="KI" class="feature-icon-img"></span>
+            <div class="feature-card-title">KI-Power mit eigenen API-Keys</div>
+            <div class="feature-card-text">
+              Wer mehr möchte, schaltet mit eigenen API-Keys leistungsstarke KI-Features wie Zusammenfassungen und erweiterte Transkription frei – du entscheidest.
+            </div>
+          </div>
+        </div>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th><span class="mode-badge mode-local">Lokal</span></th>
+                <th><span class="mode-badge mode-api">API / KI</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Kosten</td><td><span class="highlight-free">Kostenlos</span></td><td>~0,6 – 1 Cent/Min</td></tr>
+              <tr><td>Internet erforderlich</td><td>Nein</td><td>Ja</td></tr>
+              <tr><td>Sprechererkennung</td><td>Manuell</td><td>Automatisch</td></tr>
+              <tr><td>KI-Zusammenfassungen</td><td><span class="compare-no">&#x2715;</span></td><td><span class="compare-yes">&#x2713;</span></td></tr>
+              <tr><td>KI-Chat</td><td><span class="compare-no">&#x2715;</span></td><td><span class="compare-yes">&#x2713;</span></td></tr>
+              <tr><td>KI-Assistenten</td><td><span class="compare-no">&#x2715;</span></td><td><span class="compare-yes">&#x2713;</span></td></tr>
+              <tr><td>Transkriptionsqualität</td><td>Gut</td><td><strong>Sehr gut</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq-section">
+    <div class="faq-container">
+      <div class="faq-box">
+        <h2 class="faq-title">Häufig gestellte Fragen</h2>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Wo werden meine API-Schlüssel gespeichert?</span><span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Deine API-Schlüssel werden verschlüsselt im iOS Keychain gespeichert und sind durch biometrische Authentifizierung (Face ID/Touch ID) geschützt. Sie verlassen niemals dein Gerät.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Wo liegen meine Aufnahmen und Daten?</span><span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Alle Daten werden lokal auf deinem iPhone gespeichert. Nichts wird automatisch in die Cloud synchronisiert.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Werden meine Aufnahmen zu externen Servern hochgeladen?</span><span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p><strong>Lokaler Modus:</strong> Nein, alles bleibt auf deinem Gerät.</p><p><strong>API-Modus:</strong> Die Audio-Datei wird temporär zu AssemblyAI oder OpenAI Whisper hochgeladen. Nach der Verarbeitung wird sie dort nicht dauerhaft gespeichert.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Kann ich die App auch ohne API-Schlüssel nutzen?</span><span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Ja! Im lokalen Modus nutzt Rectly Apple Speech Recognition – kostenlos, offline und ohne API-Schlüssel. Den Modus wählst du in den Einstellungen.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Wie viel kostet die Transkription im API-Modus?</span><span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p><strong>OpenAI Whisper:</strong> ~0,6 Cent pro Minute<br><strong>AssemblyAI:</strong> ~1 Cent pro Minute</p><p>Die Kosten werden im Dashboard auf der Startseite angezeigt.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Welche Sprachen werden unterstützt?</span><span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p><strong>Lokal:</strong> Alle von Apple Speech Recognition unterstützten Sprachen.</p><p><strong>API:</strong> Über 50 Sprachen (Whisper), zahlreiche Sprachen (AssemblyAI).</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Wie funktioniert die Sprechererkennung?</span><span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p><strong>API-Modus:</strong> AssemblyAI erkennt Sprecher automatisch. Du weist ihnen danach Namen zu.</p><p><strong>Lokaler Modus:</strong> Sprecher können manuell markiert und benannt werden.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Kann ich Sprechernamen nachträglich ändern?</span><span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Ja, nach der Transkription und auch jederzeit später in den Aufnahmedetails.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Welche KI-Funktionen bietet die App?</span><span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Automatische Zusammenfassungen, KI-Chat zu Aufnahmen, KI-Assistenten mit Prompt-Templates und mehrere Entwürfe pro Aufnahme.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Warum sehe ich keine KI-Funktionen?</span><span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>KI-Features sind nur im API-Modus verfügbar. Wechsle in den Einstellungen zum API-Modus, um sie zu aktivieren.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Kann ich Transkripte exportieren?</span><span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Ja, als professionell formatierte A4-PDFs mit Transkript, Sprecherinformationen und optional KI-Zusammenfassungen.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Kann ich das Transkript bearbeiten?</span><span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Ja, mit Texteditor, Audio-Synchronisation und der Möglichkeit, Sprecher-Tags einzufügen.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Welche iOS-Version benötige ich?</span><span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Rectly benötigt mindestens iOS 16.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Nutzt die App externe Bibliotheken?</span><span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Nein, Rectly verwendet ausschließlich Apple-Frameworks – keine externen Dependencies.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="#faq">FAQ</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="datenschutz.html#impressum">Impressum</a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Rectly. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/emoji-background.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
