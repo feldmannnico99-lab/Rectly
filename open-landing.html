@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rectly – Landing Page starten</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(ellipse at top, #0a1628 0%, #000 70%);
+      font-family: -apple-system, 'Outfit', 'Inter', system-ui, sans-serif;
+      color: #eef0f4;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 24px;
+      backdrop-filter: blur(20px);
+      padding: 3rem 2.5rem;
+      max-width: 480px;
+      width: calc(100% - 2rem);
+      text-align: center;
+    }
+
+    .logo {
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      margin: 0 auto 1.5rem;
+      display: block;
+      box-shadow: 0 8px 32px rgba(4, 117, 245, 0.3);
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #fff, rgba(255,255,255,0.7));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 0.9375rem;
+      color: #8b919c;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: center;
+      font-size: 0.875rem;
+      margin-bottom: 2rem;
+      padding: 0.625rem 1.25rem;
+      border-radius: 100px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #f59e0b;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    .dot.online { background: #22c55e; animation: none; }
+    .dot.offline { background: #ef4444; animation: none; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .open-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 0.875rem 2rem;
+      background: #0475f5;
+      color: #fff;
+      border-radius: 100px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      transition: opacity 0.2s, transform 0.2s;
+      margin-bottom: 1.5rem;
+    }
+
+    .open-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+
+    .open-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(255,255,255,0.07);
+      margin: 1.5rem 0;
+    }
+
+    .instructions {
+      text-align: left;
+    }
+
+    .instructions h3 {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8b919c;
+      margin-bottom: 1rem;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.875rem;
+      margin-bottom: 0.875rem;
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(4, 117, 245, 0.15);
+      border: 1px solid rgba(4, 117, 245, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #3a8fff;
+    }
+
+    .step-text {
+      font-size: 0.875rem;
+      color: #8b919c;
+      line-height: 1.5;
+      padding-top: 3px;
+    }
+
+    code {
+      font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+      font-size: 0.8125rem;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 0.125rem 0.5rem;
+      color: #eef0f4;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="rectly-v2 5/assets/images/logo.png" alt="Rectly" class="logo"
+         onerror="this.style.display='none'" />
+    <h1>Rectly Landing Page</h1>
+    <p class="subtitle">Starte den Vite Dev-Server, um die Landing Page zu öffnen.</p>
+
+    <div class="status" id="status">
+      <div class="dot" id="dot"></div>
+      <span id="status-text">Verbindung wird geprüft…</span>
+    </div>
+
+    <br />
+    <a href="http://localhost:5173" class="open-btn" id="open-btn" target="_blank">
+      🚀&nbsp; Landing Page öffnen
+    </a>
+
+    <div class="divider"></div>
+
+    <div class="instructions">
+      <h3>So startest du die App</h3>
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          Öffne ein Terminal im Projektordner:<br />
+          <code>/rectly-landing/</code>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          Führe den Dev-Server aus:<br />
+          <code>npm run dev</code>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          Klicke oben auf <strong style="color:#eef0f4">"Landing Page öffnen"</strong> —
+          der Browser öffnet <code>localhost:5173</code>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const dot = document.getElementById('dot')
+    const statusText = document.getElementById('status-text')
+
+    async function checkServer() {
+      try {
+        await fetch('http://localhost:5173', { mode: 'no-cors', signal: AbortSignal.timeout(2000) })
+        dot.className = 'dot online'
+        statusText.textContent = 'Dev-Server läuft auf localhost:5173'
+      } catch {
+        dot.className = 'dot offline'
+        statusText.textContent = 'Dev-Server nicht erreichbar – npm run dev ausführen'
+      }
+    }
+
+    checkServer()
+    setInterval(checkServer, 4000)
+  </script>
+</body>
+</html>

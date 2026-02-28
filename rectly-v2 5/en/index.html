@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rectly - The intelligent meeting recording app with AI-powered transcription for iOS.">
+  <meta name="keywords" content="Meeting recording, Transcription, iOS App, AI">
+
+  <title>Rectly - Intelligent Meeting Recording</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+</head>
+<body>
+  <!-- Canvas for Emoji Background -->
+  <canvas id="emoji-canvas"></canvas>
+
+  <!-- Language Switcher -->
+  <div class="language-switcher">
+    <a href="../de/index.html" class="lang-btn" title="Deutsch"><img src="../assets/images/flag-de.svg" alt="DE" class="flag-icon"></a>
+    <a href="../en/index.html" class="lang-btn active" title="English"><img src="../assets/images/flag-gb.svg" alt="EN" class="flag-icon"></a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="../assets/images/logo.png" alt="Rectly App Icon" class="app-icon">
+      <h1 class="hero-title gradient-text">Rectly</h1>
+      <p class="tagline">
+        Your intelligent meeting recording app with AI-powered transcription and speaker identification.
+      </p>
+      <div class="hero-cta">
+        <a href="#" class="app-store-badge">
+          <img src="../assets/images/app-store-badge-en.svg" alt="Download on the App Store">
+        </a>
+      </div>
+    </div>
+
+    <!-- App Preview -->
+    <div class="app-preview">
+      <img src="../assets/images/Fertig1.png" alt="Rectly App Screenshot 1" class="preview-image">
+      <img src="../assets/images/Fertig2.png" alt="Rectly App Screenshot 2" class="preview-image">
+      <img src="../assets/images/Fertig3.png" alt="Rectly App Screenshot 3" class="preview-image">
+    </div>
+  </section>
+
+  <!-- Gradient Divider -->
+  <hr class="section-divider">
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="section-container">
+      <div class="section-header" data-reveal>
+        <span class="section-label">Features</span>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card" data-reveal data-delay="100">
+          <span class="feature-card-icon"><img src="../assets/images/rectly-local-mode-icon.png" alt="Local" class="feature-icon-img"></span>
+          <div class="feature-card-title">Fully local</div>
+          <div class="feature-card-text">
+            Rectly works entirely on your device – no AI, no account, and no internet connection required. Recording, transcription, and manual speaker identification included.
+          </div>
+        </div>
+        <div class="feature-card" data-reveal data-delay="200">
+          <span class="feature-card-icon"><img src="../assets/images/rectly-api-mode-icon.png" alt="AI" class="feature-icon-img"></span>
+          <div class="feature-card-title">AI power with your own API keys</div>
+          <div class="feature-card-text">
+            Want more? Unlock powerful AI features like summaries and enhanced transcription with your own API keys – you decide.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gradient Divider -->
+  <hr class="section-divider">
+
+  <!-- Pricing Section -->
+  <section class="pricing-section">
+    <div class="section-container">
+      <div class="section-header" data-reveal>
+        <span class="section-label">Pricing</span>
+        <h2 class="section-title">Choose your plan</h2>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card" data-reveal data-delay="100">
+          <div class="pricing-card-header">
+            <div class="pricing-card-name">Rectly Free</div>
+            <div class="pricing-card-price">0.00 <span class="pricing-currency">&euro;</span></div>
+          </div>
+          <ul class="pricing-card-features">
+            <li>60 minutes recording per week</li>
+            <li>Local transcription (Apple)</li>
+            <li>Folder organization</li>
+            <li>PDF export</li>
+            <li>Manual speaker identification</li>
+            <li>Planner</li>
+          </ul>
+        </div>
+        <div class="pricing-card pricing-card-highlight" data-reveal data-delay="200">
+          <div class="pricing-card-badge">Popular</div>
+          <div class="pricing-card-header">
+            <div class="pricing-card-name">Rectly Basis</div>
+            <div class="pricing-card-price">1.99 <span class="pricing-currency">&euro; / month</span></div>
+          </div>
+          <ul class="pricing-card-features">
+            <li class="pricing-inherit">Everything from Free</li>
+            <li>10 hours recording per month</li>
+            <li>API key integration (OpenAI)</li>
+            <li>AI transcription <span class="pricing-note">(with your own API keys only)</span></li>
+            <li>Automatic speaker identification <span class="pricing-note">(with your own API keys only)</span></li>
+            <li>AI summary &amp; chat <span class="pricing-note">(with your own API keys only)</span></li>
+            <li>Custom AI prompts <span class="pricing-note">(with your own API keys only)</span></li>
+            <li>Edit and add planners</li>
+          </ul>
+        </div>
+        <div class="pricing-card" data-reveal data-delay="300">
+          <div class="pricing-card-header">
+            <div class="pricing-card-name">Rectly Pro</div>
+            <div class="pricing-card-price">3.99 <span class="pricing-currency">&euro; / month</span></div>
+          </div>
+          <ul class="pricing-card-features">
+            <li class="pricing-inherit">Everything from Basis</li>
+            <li>Unlimited recording time</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gradient Divider -->
+  <hr class="section-divider">
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq-section">
+    <div class="section-container">
+      <div class="section-header" data-reveal>
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-box" data-reveal>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Where are my API keys stored?</span>
+              <span class="faq-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <div class="faq-answer"><p>Your API keys are stored encrypted in the iOS Keychain, protected by biometric authentication (Face ID/Touch ID). They never leave your device.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Where is my data stored?</span>
+              <span class="faq-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <div class="faq-answer"><p>All data is stored locally on your iPhone. Nothing is automatically synced to the cloud.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Are my recordings uploaded to external servers?</span>
+              <span class="faq-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <div class="faq-answer"><p><strong>Local mode:</strong> No, everything stays on your device.</p><p><strong>API mode:</strong> The audio file is temporarily uploaded to OpenAI.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I use the app without API keys?</span>
+              <span class="faq-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <div class="faq-answer"><p>Yes! In local mode, Rectly uses Apple Speech Recognition – free, offline, no API keys needed. Switch modes in Settings.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How much does API transcription cost?</span>
+              <span class="faq-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <div class="faq-answer"><p><strong>OpenAI Whisper:</strong> ~$0.006 per minute</p><p>Costs are displayed on the dashboard on the home screen.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Which languages are supported?</span>
+              <span class="faq-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <div class="faq-answer"><p><strong>Local:</strong> All languages supported by Apple Speech Recognition.</p><p><strong>API:</strong> Over 50 languages (OpenAI Whisper).</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How does speaker identification work?</span>
+              <span class="faq-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <div class="faq-answer"><p><strong>API mode:</strong> OpenAI detects speakers automatically. You assign names afterwards.</p><p><strong>Local mode:</strong> Speakers can be manually tagged and named.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I change speaker names later?</span>
+              <span class="faq-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <div class="faq-answer"><p>Yes, after transcription and also anytime later in the recording details.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What AI features does the app offer?</span>
+              <span class="faq-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <div class="faq-answer"><p>Automatic summaries, AI chat about recordings, AI assistants with prompt templates, and multiple drafts per recording.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Why can't I see the AI features?</span>
+              <span class="faq-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <div class="faq-answer"><p>AI features are only available in API mode. Switch to API mode in Settings to enable them.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I export transcripts?</span>
+              <span class="faq-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <div class="faq-answer"><p>Yes, as professionally formatted A4 PDFs with transcript, speaker info, and optional AI summaries.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I edit the transcript?</span>
+              <span class="faq-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <div class="faq-answer"><p>Yes, with a text editor, audio synchronization, and the ability to insert speaker tags.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Which iOS version do I need?</span>
+              <span class="faq-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <div class="faq-answer"><p>Rectly requires at least iOS 16.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Does the app use external libraries?</span>
+              <span class="faq-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <div class="faq-answer"><p>No, Rectly uses only Apple frameworks – no external dependencies.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="#faq">FAQ</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="privacy.html#imprint">Imprint</a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Rectly. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/emoji-background.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
