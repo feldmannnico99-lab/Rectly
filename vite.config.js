@@ -5,7 +5,8 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Rectly/',
+  // base auf '/' setzen, da die Custom Domain rectly.app direkt auf das Root-Verzeichnis zeigt
+  base: '/', 
   plugins: [
     react(),
     tailwindcss(),
