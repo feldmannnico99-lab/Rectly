@@ -90,7 +90,7 @@ const CONTENT = {
         { q: 'Nutzt die App externe Bibliotheken?', a: 'Nein. Rectly setzt ausschließlich auf Apple-eigene Frameworks – keine externen SDKs, keine Tracking-Bibliotheken, keine versteckten Abhängigkeiten.' },
       ],
     },
-    footer: { home: 'Startseite', privacy: 'Datenschutz', imprint: 'Impressum', copyright: '© 2026 Rectly. Alle Rechte vorbehalten.' },
+    footer: { home: 'Startseite', privacy: 'Datenschutz', privacyApp: 'Datenschutz App', imprint: 'Impressum', support: 'Support', copyright: '© 2026 Rectly. Alle Rechte vorbehalten.' },
     legal: { back: 'Zurück zur Startseite' },
   },
 
@@ -172,7 +172,7 @@ const CONTENT = {
         { q: 'Does the app use third-party libraries?', a: 'No. Rectly relies exclusively on Apple\'s own frameworks – no external SDKs, no tracking libraries, no hidden dependencies.' },
       ],
     },
-    footer: { home: 'Home', privacy: 'Privacy Policy', imprint: 'Legal Notice', copyright: '© 2026 Rectly. All rights reserved.' },
+    footer: { home: 'Home', privacy: 'Privacy Policy', privacyApp: 'App Privacy', imprint: 'Legal Notice', support: 'Support', copyright: '© 2026 Rectly. All rights reserved.' },
     legal: { back: 'Back to home' },
   },
 }
@@ -500,6 +500,181 @@ function LegalPage({ section, onBack, lang }) {
   )
 }
 
+/* ─── Datenschutz App Page ──────────────────────────────── */
+function DatenschutzAppPage({ onBack, lang }) {
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
+  const c = CONTENT[lang]
+
+  return (
+    <div className="legal-wrap">
+      <button className="legal-back" onClick={onBack}>
+        <ArrowLeft size={14} /> {c.legal.back}
+      </button>
+      <div className="legal-doc">
+        <h1>Datenschutzerklärung</h1>
+        <p><strong>Rectly – Meeting Recorder &amp; Transkriptions-App</strong></p>
+        <p>Stand: Februar 2025</p>
+
+        <h2>1. Datenschutz auf einen Blick</h2>
+        <p>Der Schutz Ihrer personenbezogenen Daten – insbesondere Ihrer Audioaufnahmen – hat für uns höchste Priorität.<br />
+        Rectly wurde nach dem Prinzip <strong>„Privacy by Design"</strong> entwickelt. Es gibt <strong>kein Benutzerkonto</strong>, <strong>keine Registrierung</strong> und <strong>kein Tracking</strong>. Standardmäßig verbleiben alle Daten auf Ihrem Gerät.</p>
+        <p>Je nach von Ihnen gewähltem Transkriptionsmodus erfolgt die Verarbeitung <strong>entweder vollständig lokal</strong> oder <strong>über einen optionalen externen KI-Dienst</strong>, den Sie selbst konfigurieren.</p>
+
+        <h2>2. Verantwortliche Stelle</h2>
+        <p><strong>nila-pure GbR</strong><br />
+        Klausenburger Gasse 8<br />
+        51674 Wiehl<br />
+        Deutschland</p>
+        <p>Vertreten durch: Laura Frahm, Nico Feldmann<br />
+        E-Mail: <a href="mailto:support@rectly.app">support@rectly.app</a></p>
+
+        <h2>3. Welche Daten werden verarbeitet?</h2>
+        <p>Rectly verarbeitet ausschließlich Daten, die für die Nutzung der App technisch erforderlich sind:</p>
+        <ul>
+          <li><strong>Audiodaten</strong><br />Audioaufnahmen von Meetings und Gesprächen, die Sie aktiv starten</li>
+          <li><strong>Transkriptionsdaten</strong><br />Texte, die aus Ihren Audioaufnahmen erzeugt werden</li>
+          <li><strong>Metadaten</strong><br />Datum, Uhrzeit und Dauer von Aufnahmen</li>
+          <li><strong>OpenAI-API-Schlüssel</strong> (optional)<br />Nur wenn Sie selbst einen eigenen API-Schlüssel hinterlegen; Speicherung ausschließlich verschlüsselt im iOS-Keychain</li>
+        </ul>
+        <p>Es werden <strong>keine</strong> Benutzerprofile erstellt und <strong>keine</strong> Nutzungsstatistiken erhoben.</p>
+
+        <h2>4. Verarbeitungsmodi der App</h2>
+        <p>Die Art der Datenverarbeitung hängt von Ihrer Auswahl in den App-Einstellungen ab:</p>
+
+        <h3>a) Lokaler Modus („Local")</h3>
+        <ul>
+          <li>Die Transkription erfolgt <strong>ausschließlich auf Ihrem Gerät</strong> mittels der Apple-eigenen Spracherkennung.</li>
+          <li>Es werden <strong>keine Audiodaten oder Transkripte</strong> an Server von nila-pure GbR oder Dritte übertragen.</li>
+          <li>Alle Daten verbleiben im geschützten App-Speicher (Sandbox) Ihres iPhones bzw. iPads.</li>
+        </ul>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung)</p>
+
+        <h3>b) API-Modus („API", optional)</h3>
+        <ul>
+          <li>Die App nutzt externe KI-Schnittstellen (z. B. Whisper/GPT), um Transkriptionen, Zusammenfassungen und Chat-Funktionen zu erzeugen.</li>
+          <li>Ihre Audiodaten und Transkriptionstexte werden dabei an Server des jeweiligen Anbieters (z. B. OpenAI, USA) übertragen.</li>
+        </ul>
+        <p><strong>Wichtiger Hinweis (BYOK – Bring Your Own Key):</strong><br />
+        Sie verwenden in Rectly <strong>ausschließlich Ihren eigenen API-Schlüssel</strong>.<br />
+        Die Datenverarbeitung durch den externen KI-Anbieter erfolgt <strong>direkt zwischen Ihnen und diesem Anbieter</strong>.<br />
+        nila-pure GbR stellt lediglich die technische Schnittstelle bereit und hat <strong>keinen Zugriff</strong> auf Ihre API-Daten.</p>
+        <p><strong>Empfehlung:</strong><br />
+        Wir empfehlen, im jeweiligen Anbieter-Dashboard die Nutzung von API-Daten zu Trainingszwecken zu deaktivieren.</p>
+
+        <h2>5. App-Berechtigungen</h2>
+        <p>Rectly benötigt folgende Zugriffsrechte:</p>
+        <ul>
+          <li><strong>Mikrofon</strong> – zur Aufnahme von Gesprächen</li>
+          <li><strong>Spracherkennung</strong> – für die lokale Transkription</li>
+          <li><strong>Face ID / Touch ID</strong> (optional) – zur Absicherung des API-Schlüssels im Keychain</li>
+        </ul>
+        <p>Aufnahmen erfolgen <strong>ausschließlich nach Ihrer aktiven Aktion</strong> und können jederzeit gestoppt werden.</p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</p>
+
+        <h2>6. Speicherung und Löschung</h2>
+        <ul>
+          <li><strong>Aufnahmen &amp; Transkripte</strong><br />Werden lokal auf Ihrem Gerät gespeichert. Beim Löschen einer Aufnahme oder der App werden diese Daten <strong>unwiderruflich entfernt</strong>.</li>
+          <li><strong>API-Schlüssel</strong><br />Wird verschlüsselt im iOS-Keychain gespeichert und verlässt das Gerät nicht.</li>
+          <li><strong>Backups</strong><br />Sofern iCloud-Backups aktiviert sind, werden App-Daten verschlüsselt in Ihrer privaten iCloud gesichert.</li>
+        </ul>
+
+        <h2>7. In-App-Käufe</h2>
+        <p>Abonnements werden vollständig über das Zahlungssystem des App Stores abgewickelt.<br />
+        nila-pure GbR erhält <strong>keine Zahlungs- oder Kreditkartendaten</strong>.<br />
+        Wir erhalten lediglich eine anonymisierte Transaktions-ID sowie den Abonnementstatus (z. B. Free, Basic, Pro).</p>
+
+        <h2>8. Weitergabe an Dritte</h2>
+        <p>Eine Weitergabe von Daten erfolgt <strong>nur</strong>, wenn Sie den optionalen API-Modus aktivieren und selbst einen externen Dienst konfigurieren.<br />
+        Rectly enthält <strong>keine</strong> Analyse-, Tracking- oder Werbe-Tools.</p>
+
+        <h2>9. Ihre Rechte</h2>
+        <p>Sie haben jederzeit das Recht auf:</p>
+        <ul>
+          <li>Auskunft (Art. 15 DSGVO)</li>
+          <li>Berichtigung (Art. 16 DSGVO)</li>
+          <li>Löschung (Art. 17 DSGVO)</li>
+          <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+          <li>Widerruf erteilter Einwilligungen (Art. 7 Abs. 3 DSGVO)</li>
+        </ul>
+        <p>Da sämtliche Daten lokal gespeichert werden, können Sie diese jederzeit selbst löschen.</p>
+        <p>Zudem haben Sie das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde.</p>
+
+        <h2>10. Datensicherheit</h2>
+        <p>Wir setzen angemessene technische und organisatorische Maßnahmen ein, insbesondere:</p>
+        <ul>
+          <li>Speicherung aller Daten im geschützten iOS-App-Speicher</li>
+          <li>Verschlüsselte Ablage sensibler Informationen im iOS-Keychain</li>
+          <li>Datenübertragung an externe Dienste nur bei aktiver Nutzung durch Sie</li>
+        </ul>
+
+        <h2>11. Änderungen dieser Datenschutzerklärung</h2>
+        <p>Diese Datenschutzerklärung kann angepasst werden, wenn sich rechtliche Anforderungen oder die Funktionen der App ändern.<br />
+        Die jeweils aktuelle Version ist in der App und unter <a href="https://rectly.app" target="_blank" rel="noreferrer">https://rectly.app</a> abrufbar.</p>
+      </div>
+    </div>
+  )
+}
+
+/* ─── Support Page ──────────────────────────────────────── */
+function SupportPage({ onBack, lang }) {
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
+  const c = CONTENT[lang]
+
+  const isDe = lang === 'de'
+
+  return (
+    <div className="legal-wrap">
+      <button className="legal-back" onClick={onBack}>
+        <ArrowLeft size={14} /> {c.legal.back}
+      </button>
+      <div className="legal-doc">
+        <h1>{isDe ? 'Support' : 'Support'}</h1>
+        <p>
+          {isDe
+            ? 'Bei Fragen, Problemen oder Feedback zur Rectly App stehen wir Dir gerne zur Verfügung.'
+            : 'If you have any questions, issues, or feedback about the Rectly app, we\'re happy to help.'}
+        </p>
+
+        <h2>{isDe ? 'Kontakt' : 'Contact'}</h2>
+        <p>
+          {isDe
+            ? 'Schreib uns einfach eine E-Mail – wir melden uns so schnell wie möglich bei Dir:'
+            : 'Simply send us an email – we\'ll get back to you as soon as possible:'}
+        </p>
+        <p>
+          <a href="mailto:support@rectly.app">support@rectly.app</a>
+        </p>
+
+        <h2>{isDe ? 'Häufige Themen' : 'Common Topics'}</h2>
+        <ul>
+          {isDe ? (
+            <>
+              <li>Fragen zur App-Nutzung oder den Features</li>
+              <li>Technische Probleme oder Bugs</li>
+              <li>Fragen zu Abonnements und In-App-Käufen</li>
+              <li>Allgemeines Feedback und Verbesserungsvorschläge</li>
+            </>
+          ) : (
+            <>
+              <li>Questions about app usage or features</li>
+              <li>Technical issues or bugs</li>
+              <li>Questions about subscriptions and in-app purchases</li>
+              <li>General feedback and suggestions</li>
+            </>
+          )}
+        </ul>
+
+        <h2>{isDe ? 'Reaktionszeit' : 'Response Time'}</h2>
+        <p>
+          {isDe
+            ? 'Wir bemühen uns, alle Anfragen innerhalb von 1–2 Werktagen zu beantworten.'
+            : 'We aim to respond to all inquiries within 1–2 business days.'}
+        </p>
+      </div>
+    </div>
+  )
+}
+
 /* ─── FAQ Row ───────────────────────────────────────────── */
 function FAQRow({ item, index, open, onToggle }) {
   return (
@@ -563,6 +738,8 @@ export default function App() {
       const h = window.location.hash
       if (h === '#datenschutz') setPage('datenschutz')
       else if (h === '#impressum') setPage('impressum')
+      else if (h === '#datenschutz-app') setPage('datenschutz-app')
+      else if (h === '#support') setPage('support')
       else setPage('home')
     }
     window.addEventListener('hashchange', handleHash)
@@ -587,12 +764,19 @@ export default function App() {
         <LangToggle lang={lang} onToggle={toggleLang} />
         <div className="content-layer">
           <Dock scrollTo={scrollTo} labels={c.dock} />
-          <LegalPage section={page} onBack={goHome} lang={lang} />
+          {page === 'datenschutz-app'
+            ? <DatenschutzAppPage onBack={goHome} lang={lang} />
+            : page === 'support'
+            ? <SupportPage onBack={goHome} lang={lang} />
+            : <LegalPage section={page} onBack={goHome} lang={lang} />
+          }
           <footer className="footer">
             <div className="footer-links">
               <button onClick={goHome}>{c.footer.home}</button>
               <button onClick={() => goTo('datenschutz')}>{c.footer.privacy}</button>
+              <button onClick={() => goTo('datenschutz-app')}>{c.footer.privacyApp}</button>
               <button onClick={() => goTo('impressum')}>{c.footer.imprint}</button>
+              <button onClick={() => goTo('support')}>{c.footer.support}</button>
             </div>
             <p className="footer-copy">{c.footer.copyright}</p>
           </footer>
@@ -746,7 +930,9 @@ export default function App() {
           <div className="footer-links">
             <a href="#faq">FAQ</a>
             <button onClick={() => goTo('datenschutz')}>{c.footer.privacy}</button>
+            <button onClick={() => goTo('datenschutz-app')}>{c.footer.privacyApp}</button>
             <button onClick={() => goTo('impressum')}>{c.footer.imprint}</button>
+            <button onClick={() => goTo('support')}>{c.footer.support}</button>
           </div>
           <p className="footer-copy">{c.footer.copyright}</p>
         </footer>
