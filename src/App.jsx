@@ -250,7 +250,7 @@ function Dock({ scrollTo, labels }) {
   const items = [
     { id: 'preise', label: labels.pricing, icon: <CircleDollarSign size={22} strokeWidth={1.5} />, action: () => scrollTo('preise') },
     { id: 'faq',    label: labels.faq,     icon: <HelpCircle size={22} strokeWidth={1.5} />,      action: () => scrollTo('faq') },
-    { id: 'appstore', label: labels.appstore, icon: <Download size={20} />, action: () => window.open('https://apps.apple.com/', '_blank') },
+    { id: 'appstore', label: labels.appstore, icon: <Download size={20} />, action: () => window.open('https://apps.apple.com/de/app/rectly/id6760129443', '_blank') },
   ]
 
   const getScale = (i) => {
@@ -832,7 +832,7 @@ export default function App() {
             </div>
 
             <div className="hero-actions">
-              <a href="#" className="hero-appstore">
+              <a href="https://apps.apple.com/de/app/rectly/id6760129443" target="_blank" rel="noreferrer" className="hero-appstore">
                 <img src={c.hero.badgeSrc} alt={c.hero.badgeAlt} />
               </a>
             </div>
@@ -897,7 +897,7 @@ export default function App() {
 
             <div className="pricing-cards-row">
               {c.pricing.plans.map((plan) => (
-                <PricingCard key={plan.planName} {...plan} />
+                <PricingCard key={plan.planName} {...plan} onButtonClick={() => window.open('https://apps.apple.com/de/app/rectly/id6760129443', '_blank')} />
               ))}
             </div>
           </div>
