@@ -90,7 +90,7 @@ const CONTENT = {
         { q: 'Nutzt die App externe Bibliotheken?', a: 'Nein. Rectly setzt ausschließlich auf Apple-eigene Frameworks – keine externen SDKs, keine Tracking-Bibliotheken, keine versteckten Abhängigkeiten.' },
       ],
     },
-    footer: { home: 'Startseite', privacy: 'Datenschutz', privacyApp: 'Datenschutz App', imprint: 'Impressum', support: 'Support', copyright: '© 2026 Rectly. Alle Rechte vorbehalten.' },
+    footer: { home: 'Startseite', privacy: 'Datenschutz', privacyApp: 'Datenschutz App', imprint: 'Impressum', support: 'Support', agb: 'AGB', copyright: '© 2026 Rectly. Alle Rechte vorbehalten.' },
     legal: { back: 'Zurück zur Startseite' },
   },
 
@@ -172,7 +172,7 @@ const CONTENT = {
         { q: 'Does the app use third-party libraries?', a: 'No. Rectly relies exclusively on Apple\'s own frameworks – no external SDKs, no tracking libraries, no hidden dependencies.' },
       ],
     },
-    footer: { home: 'Home', privacy: 'Privacy Policy', privacyApp: 'App Privacy', imprint: 'Legal Notice', support: 'Support', copyright: '© 2026 Rectly. All rights reserved.' },
+    footer: { home: 'Home', privacy: 'Privacy Policy', privacyApp: 'App Privacy', imprint: 'Legal Notice', support: 'Support', agb: 'Terms of Use', copyright: '© 2026 Rectly. All rights reserved.' },
     legal: { back: 'Back to home' },
   },
 }
@@ -675,6 +675,298 @@ function SupportPage({ onBack, lang }) {
   )
 }
 
+/* ─── AGB Page ──────────────────────────────────────────── */
+function AGBPage({ onBack, lang }) {
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
+  const c = CONTENT[lang]
+  const isDe = lang === 'de'
+
+  return (
+    <div className="legal-wrap">
+      <button className="legal-back" onClick={onBack}>
+        <ArrowLeft size={14} /> {c.legal.back}
+      </button>
+      <div className="legal-doc">
+        {isDe ? (
+          <>
+            <h1>Nutzungsbedingungen</h1>
+            <p>Nutzungsbedingungen · Lizenzrechte · Haftungsausschlüsse · KI-Abgrenzung</p>
+            <p><strong>Stand:</strong> 19. Februar 2026<br /><strong>Version:</strong> MASTER 1.1</p>
+
+            <h2>Anbieter &amp; Vertragspartner</h2>
+            <p>nila-pure GbR<br />51674 Wiehl, Deutschland<br />E-Mail: <a href="mailto:support@rectly.app">support@rectly.app</a></p>
+
+            <h2>§ 1 Geltungsbereich, Nutzerkreis und Vertragsgegenstand</h2>
+            <p>(1) Diese <strong>Nutzungsbedingungen</strong> regeln die Nutzung der mobilen Applikation „Rectly" (nachfolgend „App"), unabhängig davon, ob die Nutzung kostenfrei oder kostenpflichtig erfolgt.</p>
+            <p>(2) Die App richtet sich an Verbraucher (§ 13 BGB) und Unternehmer (§ 14 BGB).</p>
+            <p>(3) Rectly ist ein technisches Werkzeug zur:</p>
+            <ul>
+              <li>Audioaufzeichnung</li>
+              <li>Transkription</li>
+              <li>Sprechererkennung und Sprecherzuordnung</li>
+              <li>Organisation und Strukturierung von Inhalten</li>
+              <li>optionalen KI-gestützten Analyse, Zusammenfassung und Chat-Auswertung</li>
+            </ul>
+            <p>(4) Mit Installation, erstmaligem Start oder fortgesetzter Nutzung der App erklärt sich der Nutzer mit diesen Nutzungsbedingungen sowie der Datenschutzerklärung einverstanden.</p>
+            <p>(5) Abweichende Bedingungen des Nutzers finden keine Anwendung, es sei denn, der Anbieter stimmt diesen ausdrücklich schriftlich zu.</p>
+            <p>(6) Zwingende gesetzliche Verbraucherrechte bleiben unberührt.</p>
+
+            <h2>§ 2 Vertragsschluss und App Store</h2>
+            <p>(1) Die Nutzung der kostenlosen Version („Rectly Free") ist unentgeltlich. Der Nutzungsvertrag kommt mit dem erstmaligen Start der App zustande.</p>
+            <p>(2) Kostenpflichtige Abonnements („Rectly Basis", „Rectly Pro") werden ausschließlich über den Apple App Store abgeschlossen.</p>
+            <p>(3) Der Kaufvertrag über kostenpflichtige Abonnements kommt <strong>ausschließlich zwischen dem Nutzer und Apple</strong> zustande. Der Anbieter ist <strong>nicht Vertragspartner</strong> dieses Kaufvertrags.</p>
+            <p>(4) Zahlungsabwicklung, Rechnungsstellung, Kündigung, Widerruf und Rückerstattung richten sich ausschließlich nach den Bedingungen von Apple.</p>
+
+            <h2>§ 3 Leistungsbeschreibung &amp; Funktionsumfang</h2>
+            <p>(1) Die App kann insbesondere folgende Funktionen bereitstellen:</p>
+            <ul>
+              <li>Audioaufzeichnung</li>
+              <li>Lokale Transkription über Apple Speech Recognition</li>
+              <li>KI-gestützte Transkription über OpenAI (nur mit eigenem API-Key)</li>
+              <li>KI-gestützte automatische Sprechererkennung über OpenAI</li>
+              <li>KI-Zusammenfassungen, Chat-Funktionen und Analysen</li>
+              <li>Lokale Speicherung und Export (z. B. PDF)</li>
+            </ul>
+            <p>(2) <strong>Ein bestimmter Funktionsumfang, eine bestimmte Genauigkeit, Qualität oder Verfügbarkeit wird nicht geschuldet.</strong></p>
+            <p>(3) Technische Änderungen, Einschränkungen, Weiterentwicklungen oder die vollständige Einstellung einzelner oder aller Funktionen bleiben vorbehalten.</p>
+
+            <h2>§ 4 Abonnementmodelle &amp; Tarifgrenzen</h2>
+            <p>(1) Die App bietet folgende Tarife:</p>
+            <ul>
+              <li>Rectly Free – kostenfrei, begrenzte Nutzung</li>
+              <li>Rectly Basis – kostenpflichtig</li>
+              <li>Rectly Pro – kostenpflichtig</li>
+            </ul>
+            <p>(2) Die Nutzung ist strikt auf den jeweiligen Tarifumfang beschränkt.</p>
+            <p>(3) Auch bei technischen Fehlern, Fehlanzeigen oder Umgehungsmöglichkeiten entsteht <strong>kein Anspruch auf Mehrnutzung</strong>.</p>
+            <p>(4) Missbrauch, Manipulationsversuche oder die Umgehung technischer Beschränkungen berechtigen den Anbieter zur <strong>sofortigen Sperrung</strong> ohne Rückerstattung.</p>
+
+            <h2>§ 5 Einräumung von Nutzungsrechten (Lizenz)</h2>
+            <p>(1) Der Anbieter räumt dem Nutzer eine <strong>einfache, nicht übertragbare, nicht unterlizenzierbare Lizenz</strong> zur Nutzung der App auf eigenen Apple-Geräten ein.</p>
+            <p>(2) Die Lizenz ist auf die Laufzeit des Abonnements bzw. bei der Free-Version auf die Dauer der Nutzung beschränkt.</p>
+            <p>(3) Untersagt sind insbesondere:</p>
+            <ul>
+              <li>Reverse Engineering, Dekompilierung oder Modifikation</li>
+              <li>Weitergabe, Vermietung oder Unterlizenzierung</li>
+              <li>Umgehung von Sicherheits- oder Abonnementmechanismen</li>
+            </ul>
+            <p>(4) Alle nicht ausdrücklich eingeräumten Rechte verbleiben beim Anbieter.</p>
+
+            <h2>§ 6 KI-Dienste &amp; externe Schnittstellen (OpenAI)</h2>
+            <p>(1) KI-gestützte Funktionen der App (insbesondere Transkription, automatische Sprechererkennung, Zusammenfassungen und Chat-Funktionen) setzen zwingend voraus, dass der Nutzer einen <strong>eigenen, gültigen API-Key von OpenAI</strong> hinterlegt.</p>
+            <p>(2) Der Anbieter stellt <strong>keine eigenen KI-Rechenleistungen</strong> bereit.</p>
+            <p>(3) Der Nutzungsvertrag für KI-Leistungen kommt <strong>ausschließlich zwischen dem Nutzer und OpenAI</strong> zustande. Der Anbieter ist <strong>nicht Vertragspartner</strong>, nicht Abrechnungsstelle und nicht Verantwortlicher für die KI-Verarbeitung.</p>
+            <p>(4) Der Nutzer ist allein verantwortlich für:</p>
+            <ul>
+              <li>die Rechtmäßigkeit der Nutzung</li>
+              <li>die Einhaltung der OpenAI-Nutzungsbedingungen</li>
+              <li>entstehende Kosten</li>
+              <li>den Umgang mit personenbezogenen oder sensiblen Daten</li>
+            </ul>
+            <p>(5) Für Inhalte, Ergebnisse, Kosten, Ausfälle oder Fehlfunktionen der OpenAI-Dienste übernimmt der Anbieter <strong>keinerlei Haftung</strong>.</p>
+
+            <h2>§ 7 Kein Anspruch auf Richtigkeit, Perfektion oder Eignung</h2>
+            <p>(1) Dem Nutzer ist ausdrücklich bewusst, dass:</p>
+            <ul>
+              <li>Transkriptionen fehlerhaft oder unvollständig sein können</li>
+              <li>automatische Sprechererkennung falsch oder ungenau sein kann</li>
+              <li>KI-Ausgaben sachlich falsch, unpräzise oder irreführend sein können</li>
+            </ul>
+            <p>(2) Die App stellt <strong>keine verlässliche, vollständige oder verbindliche Dokumentation</strong> dar.</p>
+            <p>(3) Die App ersetzt <strong>keine rechtliche, medizinische, steuerliche oder sonstige professionelle Beratung</strong>.</p>
+            <p>(4) Entscheidungen auf Basis der App erfolgen <strong>ausschließlich auf eigenes Risiko</strong>.</p>
+
+            <h2>§ 8 Audioaufzeichnungen &amp; rechtliche Verantwortung</h2>
+            <p>(1) Der Nutzer ist allein verantwortlich für:</p>
+            <ul>
+              <li>die Zulässigkeit von Audioaufzeichnungen</li>
+              <li>die Einholung aller erforderlichen Einwilligungen</li>
+              <li>die Einhaltung geltender Gesetze (insbesondere § 201 StGB und DSGVO)</li>
+            </ul>
+            <p>(2) Der Anbieter prüft nicht, ob Aufzeichnungen rechtmäßig sind.</p>
+            <p>(3) Der Nutzer stellt den Anbieter von sämtlichen Ansprüchen Dritter frei, die aus einer rechtswidrigen Nutzung resultieren.</p>
+
+            <h2>§ 9 Datenspeicherung &amp; Datenverlust</h2>
+            <p>(1) Daten werden grundsätzlich lokal auf dem Gerät des Nutzers gespeichert.</p>
+            <p>(2) Der Nutzer ist verpflichtet, <strong>regelmäßige Backups</strong> zu erstellen.</p>
+            <p>(3) Eine Haftung für Datenverlust besteht seitens des Anbieters zu keiner Zeit. Der Nutzer ist eigenständig für die Sicherung bzw. Backups seiner Daten zuständig.</p>
+
+            <h2>§ 10 Support</h2>
+            <p>(1) Es besteht <strong>kein Anspruch auf Support</strong>, Reaktion oder Problemlösung.</p>
+            <p>(2) Auch zahlende Nutzer haben keinen Anspruch auf Supportleistungen.</p>
+            <p>(3) Support ist eine freiwillige, unverbindliche Leistung ohne Service-Level-Zusagen.</p>
+
+            <h2>§ 11 Haftungsbeschränkung</h2>
+            <p>(1) Eine Haftung für:</p>
+            <ul>
+              <li>Fehltranskriptionen</li>
+              <li>fehlerhafte Sprechererkennung</li>
+              <li>KI-generierte Inhalte</li>
+              <li>Datenverlust</li>
+              <li>entgangenen Gewinn</li>
+              <li>mittelbare Schäden</li>
+            </ul>
+            <p>ist ausgeschlossen.</p>
+
+            <h2>§ 12 Verfügbarkeit &amp; Änderungen</h2>
+            <p>(1) Ein Anspruch auf dauerhafte oder unterbrechungsfreie Verfügbarkeit der App besteht nicht.</p>
+            <p>(2) Der Anbieter ist berechtigt, Funktionen jederzeit zu ändern, einzuschränken oder einzustellen.</p>
+
+            <h2>§ 13 Änderung der Nutzungsbedingungen</h2>
+            <p>(1) Der Anbieter behält sich vor, diese Nutzungsbedingungen mit Wirkung für die Zukunft zu ändern.</p>
+            <p>(2) Die jeweils aktuelle Fassung ist innerhalb der App abrufbar.</p>
+
+            <h2>§ 14 Anwendbares Recht &amp; Gerichtsstand</h2>
+            <p>(1) Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts.</p>
+            <p>(2) Gerichtsstand ist für alle Rechtsstreitigkeiten, soweit gesetzlich zulässig, das für <strong>51674 Wiehl</strong> sachlich und örtlich zuständige Gericht maßgeblich (derzeit das <strong>Amtsgericht Gummersbach</strong>, Steinmüllerallee 1 a, 51643 Gummersbach).</p>
+            <p>(3) Für Verbraucher gelten die gesetzlichen Gerichtsstände.</p>
+
+            <h2>§ 15 Salvatorische Klausel</h2>
+            <p>Sollten einzelne Bestimmungen dieser Nutzungsbedingungen unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Regelungen unberührt.</p>
+          </>
+        ) : (
+          <>
+            <h1>Terms of Use</h1>
+            <p>Terms of Use · License Rights · Disclaimers · AI Delimitation</p>
+            <p><strong>Date:</strong> 19 February 2026<br /><strong>Version:</strong> MASTER 1.1</p>
+
+            <h2>Provider &amp; Contractual Partner</h2>
+            <p>nila-pure GbR<br />51674 Wiehl, Germany<br />Email: <a href="mailto:support@rectly.app">support@rectly.app</a></p>
+
+            <h2>§ 1 Scope, Users and Subject Matter</h2>
+            <p>(1) These <strong>Terms of Use</strong> govern the use of the mobile application "Rectly" (hereinafter "App"), regardless of whether use is free of charge or subject to a fee.</p>
+            <p>(2) The App is aimed at consumers (§ 13 BGB) and entrepreneurs (§ 14 BGB).</p>
+            <p>(3) Rectly is a technical tool for:</p>
+            <ul>
+              <li>Audio recording</li>
+              <li>Transcription</li>
+              <li>Speaker recognition and speaker assignment</li>
+              <li>Organisation and structuring of content</li>
+              <li>Optional AI-supported analysis, summarisation and chat evaluation</li>
+            </ul>
+            <p>(4) By installing, launching for the first time, or continuing to use the App, the user agrees to these Terms of Use and the Privacy Policy.</p>
+            <p>(5) Deviating terms of the user do not apply unless the provider expressly agrees to them in writing.</p>
+            <p>(6) Mandatory statutory consumer rights remain unaffected.</p>
+
+            <h2>§ 2 Conclusion of Contract and App Store</h2>
+            <p>(1) Use of the free version ("Rectly Free") is free of charge. The usage contract is concluded when the App is launched for the first time.</p>
+            <p>(2) Paid subscriptions ("Rectly Basic", "Rectly Pro") are concluded exclusively via the Apple App Store.</p>
+            <p>(3) The purchase contract for paid subscriptions is concluded <strong>exclusively between the user and Apple</strong>. The provider is <strong>not a contractual partner</strong> of this purchase contract.</p>
+            <p>(4) Payment processing, invoicing, cancellation, withdrawal, and refunds are governed exclusively by Apple's terms and conditions.</p>
+
+            <h2>§ 3 Service Description &amp; Scope of Functions</h2>
+            <p>(1) The App may provide the following functions in particular:</p>
+            <ul>
+              <li>Audio recording</li>
+              <li>Local transcription via Apple Speech Recognition</li>
+              <li>AI-supported transcription via OpenAI (only with your own API key)</li>
+              <li>AI-supported automatic speaker recognition via OpenAI</li>
+              <li>AI summaries, chat functions and analyses</li>
+              <li>Local storage and export (e.g. PDF)</li>
+            </ul>
+            <p>(2) <strong>No specific scope of functions, accuracy, quality or availability is owed.</strong></p>
+            <p>(3) Technical changes, restrictions, further developments, or the complete discontinuation of individual or all functions are reserved.</p>
+
+            <h2>§ 4 Subscription Models &amp; Plan Limits</h2>
+            <p>(1) The App offers the following plans:</p>
+            <ul>
+              <li>Rectly Free – free of charge, limited use</li>
+              <li>Rectly Basic – paid</li>
+              <li>Rectly Pro – paid</li>
+            </ul>
+            <p>(2) Use is strictly limited to the respective plan scope.</p>
+            <p>(3) Even in the event of technical errors, incorrect displays, or circumvention options, <strong>no entitlement to additional use arises</strong>.</p>
+            <p>(4) Misuse, attempts at manipulation, or circumvention of technical restrictions entitle the provider to <strong>immediate blocking</strong> without refund.</p>
+
+            <h2>§ 5 Grant of Usage Rights (Licence)</h2>
+            <p>(1) The provider grants the user a <strong>simple, non-transferable, non-sublicensable licence</strong> to use the App on their own Apple devices.</p>
+            <p>(2) The licence is limited to the duration of the subscription or, for the free version, to the period of use.</p>
+            <p>(3) The following are prohibited in particular:</p>
+            <ul>
+              <li>Reverse engineering, decompilation or modification</li>
+              <li>Transfer, rental or sublicensing</li>
+              <li>Circumvention of security or subscription mechanisms</li>
+            </ul>
+            <p>(4) All rights not expressly granted remain with the provider.</p>
+
+            <h2>§ 6 AI Services &amp; External Interfaces (OpenAI)</h2>
+            <p>(1) AI-supported functions of the App (in particular transcription, automatic speaker recognition, summaries and chat functions) require the user to provide their <strong>own valid API key from OpenAI</strong>.</p>
+            <p>(2) The provider does <strong>not provide its own AI computing services</strong>.</p>
+            <p>(3) The usage contract for AI services is concluded <strong>exclusively between the user and OpenAI</strong>. The provider is <strong>not a contractual partner</strong>, not a billing party, and not responsible for AI processing.</p>
+            <p>(4) The user is solely responsible for:</p>
+            <ul>
+              <li>the lawfulness of use</li>
+              <li>compliance with OpenAI's terms of use</li>
+              <li>costs incurred</li>
+              <li>handling personal or sensitive data</li>
+            </ul>
+            <p>(5) The provider accepts <strong>no liability</strong> for content, results, costs, failures or malfunctions of the OpenAI services.</p>
+
+            <h2>§ 7 No Entitlement to Accuracy, Perfection or Suitability</h2>
+            <p>(1) The user expressly acknowledges that:</p>
+            <ul>
+              <li>transcriptions may be incorrect or incomplete</li>
+              <li>automatic speaker recognition may be wrong or inaccurate</li>
+              <li>AI outputs may be factually incorrect, imprecise or misleading</li>
+            </ul>
+            <p>(2) The App does not constitute <strong>reliable, complete or binding documentation</strong>.</p>
+            <p>(3) The App does not replace <strong>legal, medical, tax or other professional advice</strong>.</p>
+            <p>(4) Decisions made on the basis of the App are made <strong>entirely at the user's own risk</strong>.</p>
+
+            <h2>§ 8 Audio Recordings &amp; Legal Responsibility</h2>
+            <p>(1) The user is solely responsible for:</p>
+            <ul>
+              <li>the permissibility of audio recordings</li>
+              <li>obtaining all required consents</li>
+              <li>compliance with applicable laws (in particular § 201 StGB and GDPR)</li>
+            </ul>
+            <p>(2) The provider does not verify whether recordings are lawful.</p>
+            <p>(3) The user indemnifies the provider against all third-party claims arising from unlawful use.</p>
+
+            <h2>§ 9 Data Storage &amp; Data Loss</h2>
+            <p>(1) Data is generally stored locally on the user's device.</p>
+            <p>(2) The user is obliged to create <strong>regular backups</strong>.</p>
+            <p>(3) The provider accepts no liability for data loss at any time. The user is independently responsible for backing up their data.</p>
+
+            <h2>§ 10 Support</h2>
+            <p>(1) There is <strong>no entitlement to support</strong>, response or problem resolution.</p>
+            <p>(2) Even paying users have no entitlement to support services.</p>
+            <p>(3) Support is a voluntary, non-binding service without service level commitments.</p>
+
+            <h2>§ 11 Limitation of Liability</h2>
+            <p>(1) Liability for:</p>
+            <ul>
+              <li>incorrect transcriptions</li>
+              <li>faulty speaker recognition</li>
+              <li>AI-generated content</li>
+              <li>data loss</li>
+              <li>loss of profit</li>
+              <li>indirect damages</li>
+            </ul>
+            <p>is excluded.</p>
+
+            <h2>§ 12 Availability &amp; Changes</h2>
+            <p>(1) There is no entitlement to permanent or uninterrupted availability of the App.</p>
+            <p>(2) The provider is entitled to change, restrict or discontinue functions at any time.</p>
+
+            <h2>§ 13 Amendments to the Terms of Use</h2>
+            <p>(1) The provider reserves the right to amend these Terms of Use with effect for the future.</p>
+            <p>(2) The current version is available within the App.</p>
+
+            <h2>§ 14 Applicable Law &amp; Jurisdiction</h2>
+            <p>(1) The law of the Federal Republic of Germany applies, excluding the UN Convention on Contracts for the International Sale of Goods.</p>
+            <p>(2) The place of jurisdiction for all legal disputes, to the extent permitted by law, is the court having subject-matter and local jurisdiction for <strong>51674 Wiehl</strong> (currently the <strong>Amtsgericht Gummersbach</strong>, Steinmüllerallee 1a, 51643 Gummersbach).</p>
+            <p>(3) Statutory places of jurisdiction apply for consumers.</p>
+
+            <h2>§ 15 Severability Clause</h2>
+            <p>Should individual provisions of these Terms of Use be or become invalid, the validity of the remaining provisions shall remain unaffected.</p>
+          </>
+        )}
+      </div>
+    </div>
+  )
+}
+
 /* ─── FAQ Row ───────────────────────────────────────────── */
 function FAQRow({ item, index, open, onToggle }) {
   return (
@@ -740,6 +1032,7 @@ export default function App() {
       else if (h === '#impressum') setPage('impressum')
       else if (h === '#datenschutz-app') setPage('datenschutz-app')
       else if (h === '#support') setPage('support')
+      else if (h === '#agb') setPage('agb')
       else setPage('home')
     }
     window.addEventListener('hashchange', handleHash)
@@ -768,6 +1061,8 @@ export default function App() {
             ? <DatenschutzAppPage onBack={goHome} lang={lang} />
             : page === 'support'
             ? <SupportPage onBack={goHome} lang={lang} />
+            : page === 'agb'
+            ? <AGBPage onBack={goHome} lang={lang} />
             : <LegalPage section={page} onBack={goHome} lang={lang} />
           }
           <footer className="footer">
@@ -777,6 +1072,7 @@ export default function App() {
               <button onClick={() => goTo('datenschutz-app')}>{c.footer.privacyApp}</button>
               <button onClick={() => goTo('impressum')}>{c.footer.imprint}</button>
               <button onClick={() => goTo('support')}>{c.footer.support}</button>
+              <button onClick={() => goTo('agb')}>{c.footer.agb}</button>
             </div>
             <p className="footer-copy">{c.footer.copyright}</p>
           </footer>
@@ -933,6 +1229,7 @@ export default function App() {
             <button onClick={() => goTo('datenschutz-app')}>{c.footer.privacyApp}</button>
             <button onClick={() => goTo('impressum')}>{c.footer.imprint}</button>
             <button onClick={() => goTo('support')}>{c.footer.support}</button>
+            <button onClick={() => goTo('agb')}>{c.footer.agb}</button>
           </div>
           <p className="footer-copy">{c.footer.copyright}</p>
         </footer>
