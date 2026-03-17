@@ -1127,11 +1127,6 @@ export default function App() {
               </div>
             </div>
 
-            <div className="hero-actions">
-              <a href="https://apps.apple.com/de/app/rectly/id6760129443" target="_blank" rel="noreferrer" className="hero-appstore">
-                <img src={c.hero.badgeSrc} alt={c.hero.badgeAlt} />
-              </a>
-            </div>
           </div>
 
           {/* iPhone gallery slider */}
